@@ -9,8 +9,8 @@ edition = "2021"
 rust-version = "1.65"
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/64bit/async-openai"
-repository = "https://github.com/64bit/async-openai"
+#homepage = "https://github.com/64bit/async-openai"
+#repository = "https://github.com/64bit/async-openai"
 
 [features]
 default = ["rustls"]

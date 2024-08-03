@@ -2,9 +2,10 @@
 use reqwest::header::{HeaderMap, AUTHORIZATION};
 use secrecy::{ExposeSecret, Secret};
 use serde::Deserialize;
+use std::env;
 
 /// Default v1 API base url
-pub const OPENAI_API_BASE: &str = "https://api.openai.com/v1";
+pub const DEFAULT_OPENAI_API_BASE: &str = "https://api.openai.com/v1";
 /// Organization header
 pub const OPENAI_ORGANIZATION_HEADER: &str = "OpenAI-Organization";
 /// Project header
@@ -38,8 +39,9 @@ pub struct OpenAIConfig {
 impl Default for OpenAIConfig {
     fn default() -> Self {
         Self {
-            api_base: OPENAI_API_BASE.to_string(),
-            api_key: std::env::var("OPENAI_API_KEY")
+            api_base: env::var("OPENAI_API_BASE")
+                .unwrap_or_else(|_| DEFAULT_OPENAI_API_BASE.to_string()).into(),
+            api_key: env::var("OPENAI_API_KEY")
                 .unwrap_or_else(|_| "".to_string())
                 .into(),
             org_id: Default::default(),

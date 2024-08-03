@@ -20,7 +20,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     let request = CreateChatCompletionRequestArgs::default()
         .max_tokens(512u32)
-        .model("gpt-3.5-turbo-0613")
+        .model("gpt-4o-mini")
         .messages([ChatCompletionRequestUserMessageArgs::default()
             .content("What's the weather like in Boston?")
             .build()?
@@ -111,7 +111,7 @@ async fn call_fn(
 
     let request = CreateChatCompletionRequestArgs::default()
         .max_tokens(512u32)
-        .model("gpt-3.5-turbo-0613")
+        .model("gpt-4o-mini")
         .messages(message)
         .build()?;
 

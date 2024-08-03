@@ -1,0 +1,1047 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'async_openai'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=async-openai"
+                ],
+                "filter": {
+                    "name": "async_openai",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'completion'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=completion",
+                    "--package=async-openai"
+                ],
+                "filter": {
+                    "name": "completion",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'embeddings'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=embeddings",
+                    "--package=async-openai"
+                ],
+                "filter": {
+                    "name": "embeddings",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'ser_de'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=ser_de",
+                    "--package=async-openai"
+                ],
+                "filter": {
+                    "name": "ser_de",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'whisper'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=whisper",
+                    "--package=async-openai"
+                ],
+                "filter": {
+                    "name": "whisper",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug integration test 'boxed_future'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--test=boxed_future",
+                    "--package=async-openai"
+                ],
+                "filter": {
+                    "name": "boxed_future",
+                    "kind": "test"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'assistants'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=assistants",
+                    "--package=assistants"
+                ],
+                "filter": {
+                    "name": "assistants",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'assistants'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=assistants",
+                    "--package=assistants"
+                ],
+                "filter": {
+                    "name": "assistants",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'assistants-code-interpreter'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=assistants-code-interpreter",
+                    "--package=assistants-code-interpreter"
+                ],
+                "filter": {
+                    "name": "assistants-code-interpreter",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'assistants-code-interpreter'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=assistants-code-interpreter",
+                    "--package=assistants-code-interpreter"
+                ],
+                "filter": {
+                    "name": "assistants-code-interpreter",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'assistants-file-search'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=assistants-file-search",
+                    "--package=assistants-file-search"
+                ],
+                "filter": {
+                    "name": "assistants-file-search",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'assistants-file-search'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=assistants-file-search",
+                    "--package=assistants-file-search"
+                ],
+                "filter": {
+                    "name": "assistants-file-search",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'assistants-func-call-stream'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=assistants-func-call-stream",
+                    "--package=assistants-func-call-stream"
+                ],
+                "filter": {
+                    "name": "assistants-func-call-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'assistants-func-call-stream'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=assistants-func-call-stream",
+                    "--package=assistants-func-call-stream"
+                ],
+                "filter": {
+                    "name": "assistants-func-call-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'audio-speech'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=audio-speech",
+                    "--package=audio-speech"
+                ],
+                "filter": {
+                    "name": "audio-speech",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'audio-speech'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=audio-speech",
+                    "--package=audio-speech"
+                ],
+                "filter": {
+                    "name": "audio-speech",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'audio-transcribe'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=audio-transcribe",
+                    "--package=audio-transcribe"
+                ],
+                "filter": {
+                    "name": "audio-transcribe",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'audio-transcribe'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=audio-transcribe",
+                    "--package=audio-transcribe"
+                ],
+                "filter": {
+                    "name": "audio-transcribe",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'audio-translate'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=audio-translate",
+                    "--package=audio-translate"
+                ],
+                "filter": {
+                    "name": "audio-translate",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'audio-translate'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=audio-translate",
+                    "--package=audio-translate"
+                ],
+                "filter": {
+                    "name": "audio-translate",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'azure-openai-service'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=azure-openai-service",
+                    "--package=azure-openai-service"
+                ],
+                "filter": {
+                    "name": "azure-openai-service",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'azure-openai-service'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=azure-openai-service",
+                    "--package=azure-openai-service"
+                ],
+                "filter": {
+                    "name": "azure-openai-service",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'chat'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=chat",
+                    "--package=chat"
+                ],
+                "filter": {
+                    "name": "chat",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'chat'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=chat",
+                    "--package=chat"
+                ],
+                "filter": {
+                    "name": "chat",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'chat-stream'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=chat-stream",
+                    "--package=chat-stream"
+                ],
+                "filter": {
+                    "name": "chat-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'chat-stream'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=chat-stream",
+                    "--package=chat-stream"
+                ],
+                "filter": {
+                    "name": "chat-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'completions'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=completions",
+                    "--package=completions"
+                ],
+                "filter": {
+                    "name": "completions",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'completions'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=completions",
+                    "--package=completions"
+                ],
+                "filter": {
+                    "name": "completions",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'completions-stream'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=completions-stream",
+                    "--package=completions-stream"
+                ],
+                "filter": {
+                    "name": "completions-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'completions-stream'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=completions-stream",
+                    "--package=completions-stream"
+                ],
+                "filter": {
+                    "name": "completions-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'create-image'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=create-image",
+                    "--package=create-image"
+                ],
+                "filter": {
+                    "name": "create-image",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'create-image'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=create-image",
+                    "--package=create-image"
+                ],
+                "filter": {
+                    "name": "create-image",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'create-image-b64-json'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=create-image-b64-json",
+                    "--package=create-image-b64-json"
+                ],
+                "filter": {
+                    "name": "create-image-b64-json",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'create-image-b64-json'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=create-image-b64-json",
+                    "--package=create-image-b64-json"
+                ],
+                "filter": {
+                    "name": "create-image-b64-json",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'create-image-edit'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=create-image-edit",
+                    "--package=create-image-edit"
+                ],
+                "filter": {
+                    "name": "create-image-edit",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'create-image-edit'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=create-image-edit",
+                    "--package=create-image-edit"
+                ],
+                "filter": {
+                    "name": "create-image-edit",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'create-image-variation'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=create-image-variation",
+                    "--package=create-image-variation"
+                ],
+                "filter": {
+                    "name": "create-image-variation",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'create-image-variation'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=create-image-variation",
+                    "--package=create-image-variation"
+                ],
+                "filter": {
+                    "name": "create-image-variation",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'embeddings'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=embeddings",
+                    "--package=embeddings"
+                ],
+                "filter": {
+                    "name": "embeddings",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'embeddings'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=embeddings",
+                    "--package=embeddings"
+                ],
+                "filter": {
+                    "name": "embeddings",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'function-call'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=function-call",
+                    "--package=function-call"
+                ],
+                "filter": {
+                    "name": "function-call",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'function-call'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=function-call",
+                    "--package=function-call"
+                ],
+                "filter": {
+                    "name": "function-call",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'function-call-stream'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=function-call-stream",
+                    "--package=function-call-stream"
+                ],
+                "filter": {
+                    "name": "function-call-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'function-call-stream'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=function-call-stream",
+                    "--package=function-call-stream"
+                ],
+                "filter": {
+                    "name": "function-call-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'in-memory-file'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=in-memory-file",
+                    "--package=in-memory-file"
+                ],
+                "filter": {
+                    "name": "in-memory-file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'in-memory-file'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=in-memory-file",
+                    "--package=in-memory-file"
+                ],
+                "filter": {
+                    "name": "in-memory-file",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'models'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=models",
+                    "--package=models"
+                ],
+                "filter": {
+                    "name": "models",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'models'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=models",
+                    "--package=models"
+                ],
+                "filter": {
+                    "name": "models",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'moderations'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=moderations",
+                    "--package=moderations"
+                ],
+                "filter": {
+                    "name": "moderations",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'moderations'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=moderations",
+                    "--package=moderations"
+                ],
+                "filter": {
+                    "name": "moderations",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'tool-call'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=tool-call",
+                    "--package=tool-call"
+                ],
+                "filter": {
+                    "name": "tool-call",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'tool-call'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=tool-call",
+                    "--package=tool-call"
+                ],
+                "filter": {
+                    "name": "tool-call",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'tool-call-stream'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=tool-call-stream",
+                    "--package=tool-call-stream"
+                ],
+                "filter": {
+                    "name": "tool-call-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'tool-call-stream'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=tool-call-stream",
+                    "--package=tool-call-stream"
+                ],
+                "filter": {
+                    "name": "tool-call-stream",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'vision-chat'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=vision-chat",
+                    "--package=vision-chat"
+                ],
+                "filter": {
+                    "name": "vision-chat",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'vision-chat'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=vision-chat",
+                    "--package=vision-chat"
+                ],
+                "filter": {
+                    "name": "vision-chat",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

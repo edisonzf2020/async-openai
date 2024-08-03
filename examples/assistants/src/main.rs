@@ -43,7 +43,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let assistant_request = CreateAssistantRequestArgs::default()
         .name(&assistant_name)
         .instructions(&instructions)
-        .model("gpt-3.5-turbo-1106")
+        .model("gpt-3.5-turbo")
         .build()?;
     let assistant = client.assistants().create(assistant_request).await?;
     //get the id of the assistant

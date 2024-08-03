@@ -13,7 +13,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
         .model("gpt-3.5-turbo")
         .max_tokens(512u32)
         .messages([ChatCompletionRequestUserMessageArgs::default()
-            .content("Write a marketing blog praising and introducing Rust library async-openai")
+            .content("写一篇夏天旅游的文章")
             .build()?
             .into()])
         .build()?;
